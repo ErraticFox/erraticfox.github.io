@@ -1,19 +1,24 @@
+* {
+  outline-style: none;
+  box-shadow: none;
+  border-color: transparent;
+}
+
 body {
   background-color: #212121;
   color: #F5F5F5;
   font-family: 'Roboto', sans-serif;
-  margin: 0px;
+  margin: 0px
 }
 
-a {
+a, #contactMe {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, .8);
   -o-transition: .5s;
   -ms-transition: .5s;
   -moz-transition: .5s;
   -webkit-transition: .5s;
   transition: .5s;
-  text-shadow: 0 0 rgba(0, 0, 255, 0)
 }
 
 ul {
@@ -22,8 +27,6 @@ ul {
 
 ul.socialMedia li {
   margin-bottom: 20px;
-  -webkit-animation: socialRGB 100ms 10;
-  animation: socialRGB 1000ms 10;
 }
 
 ul.socialMedia li {
@@ -67,9 +70,10 @@ ul.socialMedia li:nth-last-child(1) {
 }
 
 .cardContainer {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -80,11 +84,59 @@ ul.socialMedia li:nth-last-child(1) {
   padding: 20px;
 }
 
-.avatar {
-  overflow: hidden;
+#contactMe {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+#contactMe:hover {
+  color: #FF7043;
+  cursor: pointer;
+}
+
+#contactForm {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#contactForm form {
+	width: 50%;
+}
+
+#contactForm input {
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #EEEEEE;
+}
+
+#contactForm input[type="submit"] {
+  float: right;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  width: 75px;
+}
+
+#contactForm input[type="email"], #contactForm textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+#contactForm textarea {
+  font-family: "Roboto", sans-serif;
+  resize: vertical;
+  min-height: 200px;
+  font-size: 18px;
+  padding: 10px;
+  background-color: #EEEEEE;
 }
 
 .socialMedia {
@@ -98,7 +150,20 @@ ul.socialMedia li:nth-last-child(1) {
 
 .avatar svg {
   width: 150px;
-	fill: white;
+  fill: rgba(255, 255, 255, .8);
+}
+
+.formPlaceholder::-webkit-input-placeholder {
+  color: #212121;
+}
+.formPlaceholder::-moz-placeholder {
+  color: #212121;
+}
+.formPlaceholder:-ms-input-placeholder {
+  color: #212121;
+}
+.formPlaceholder:-moz-placeholder {
+  color: #212121;
 }
 
 @media only screen and (max-width: 500px) {

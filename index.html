@@ -9,6 +9,7 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 	<script src="https://use.fontawesome.com/d96fcac861.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="referrer" content="origin">
 </head>
 
 <!--
@@ -21,6 +22,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  -->
+
 
 <body>
 	<div class="cardContainer">
@@ -48,7 +50,19 @@
 				<li><a href="https://github.com/erraticfox"><i class="fa fa-github"></i><span class="seperator">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;</span>GitHub</a></li>
 			</ul>
 		</div>
+		<span id="contactMe">or just email me...</span>
+	</div>
+	<div id="contactForm">
+		<form action="https://formspree.io/erraticfox@gmail.com" method="POST">
+			<input class="formPlaceholder" type="email" name="_replyto" placeholder="Email"></br>
+			<textarea class="formPlaceholder" name="message" placeholder="Your message"></textarea></br>
+			<input type="submit" value="Send">
+		</form>
 	</div>
 </body>
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="js/main.js"></script>
 
 </html>
