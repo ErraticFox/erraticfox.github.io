@@ -2,7 +2,7 @@ body {
   background-color: #212121;
   color: #F5F5F5;
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  margin: 0px;
 }
 
 a {
@@ -13,10 +13,17 @@ a {
   -moz-transition: .5s;
   -webkit-transition: .5s;
   transition: .5s;
+  text-shadow: 0 0 rgba(0, 0, 255, 0)
 }
 
 ul {
   list-style-type: none;
+}
+
+ul.socialMedia li {
+  margin-bottom: 20px;
+  -webkit-animation: socialRGB 100ms 10;
+  animation: socialRGB 1000ms 10;
 }
 
 ul.socialMedia li {
@@ -51,6 +58,10 @@ ul.socialMedia li:hover:nth-child(7) a {
   color: #35465c;
 }
 
+ul.socialMedia li:hover:nth-child(8) a {
+  color: #78909C;
+}
+
 ul.socialMedia li:nth-last-child(1) {
   margin-bottom: 10px;
 }
@@ -70,42 +81,10 @@ ul.socialMedia li:nth-last-child(1) {
 }
 
 .avatar {
-  width: 200px;
-  height: 200px;
-  overflow: auto;
-  background-image: url('../web1.png');
-  background-position: center;
-  background-size: 200px;
-  background-repeat: no-repeat;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-.avatar:hover {
-  background-image: url('../web2.png');
-}
-
-.avatar svg {
-  height: 50%;
-}
-
-svg g polygon {
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-svg:hover g polygon {
-  fill: #212121 !important;
 }
 
 .socialMedia {
@@ -117,24 +96,29 @@ svg:hover g polygon {
   width: 21px;
 }
 
+.avatar svg {
+  width: 150px;
+	fill: white;
+}
+
 @media only screen and (max-width: 500px) {
   .cardContainer {
-    display: flex;
     height: auto;
   }
-  .card {
-    display: block;
-    padding: 20px;
+  .avatar svg {
+    width: 75px;
+    margin: 20px 0
   }
-	.fa, .seperator {
-		display: none !important;
-	}
-	.socialMedia {
-		font-size: 2em;
-		text-align: center;
-		padding-left: 0px;
-	}
-	.avatar:hover {
-	  background-image: url('../web1.png');
-	}
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .fa, .seperator {
+    display: none !important;
+  }
+  .socialMedia {
+    font-size: 1em;
+    text-align: center;
+    padding-left: 0px;
+  }
 }
