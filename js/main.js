@@ -23,4 +23,9 @@ $(document).ready(() => {
 	$('textarea').resizable();
 
 	$('.ui-resizable-s, .ui-resizable-e').remove();
+
+	$('#sendEmail').click(() => {
+		$('input[type="submit"]').click();
+	});
+
 });
