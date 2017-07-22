@@ -113,6 +113,7 @@ ul.socialMedia li:nth-last-child(1) {
   overflow: hidden;
 }
 
+
 /* contact form*/
 
 #contactForm {
@@ -130,65 +131,66 @@ ul.socialMedia li:nth-last-child(1) {
 #contactForm form {
   display: flex;
   flex-direction: column;
-	width: 50%;
+  width: 50%;
 }
 
 #contactForm input[type="email"], #contactForm input[type="subject"] {
-	padding: 15px;
-	border-bottom: 1px solid #E0E0E0;
+  padding: 15px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.ui-wrapper {
+  min-height: 200px;
 }
 
 #contactForm textarea {
-	padding: 15px;
-	min-height: 100%;
+  padding: 15px;
+  height: 100%;
 }
 
 #formButtons {
-	display: flex;
-	padding: 15px 5px;
-	align-items: center;
-	justify-content: space-between;
-	background-color: #FAFAFA;
-	border-bottom: 1px solid #E0E0E0;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FAFAFA;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 #contactForm input[type="submit"], #contactForm input[type="button"] {
   box-sizing: border-box;
-	background-color: #FAFAFA;
-	opacity: .8;
-	padding: 0 20px;
-	margin: 0;
-	border: 0;
-	height: 20px;
-	cursor: pointer;
+  background-color: #FAFAFA;
+  opacity: .8;
+  padding: 0 20px;
+  margin: 0;
+  border: 0;
+  height: 20px;
+  cursor: pointer;
 }
 
 #contactForm input[type="submit"] {
-	background-image: url('../img/send.png');
-	background-position: center;
-	background-repeat: no-repeat;
+  background-image: url('../img/send.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #contactForm input[type="button"] {
-	background-image: url('../img/close.png');
-	background-position: center;
-	background-repeat: no-repeat;
+  background-image: url('../img/close.png');
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #closeForm {
   position: absolute;
-	right: 0;
+  right: 0;
 }
 
 #closeForm:hover {
   cursor: pointer;
 }
 
-/* jQuery Overrides */
 
-.ui-wrapper {
-	min-height: 200px;
-}
+/* jQuery Overrides */
 
 .ui-wrapper {
   width: 100% !important;
@@ -204,7 +206,7 @@ ul.socialMedia li:nth-last-child(1) {
   right: 0;
   height: 15px !important;
   width: 15px !important;
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 .ui-resizable-handle {
@@ -222,6 +224,7 @@ ul.socialMedia li:nth-last-child(1) {
 .ui-icon-gripsmall-diagonal-se {
   background-position: -48px 0px;
 }
+
 
 /**/
 
@@ -245,22 +248,29 @@ ul.socialMedia li:nth-last-child(1) {
     text-align: center;
     padding-left: 0px;
   }
+  /*contact form mobile*/
+  #contactForm form {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+		height: 95%;
+  }
+
+	#contactForm textarea {
+	  height: 100%;
+	}
+
+	.ui-icon {
+	  opacity: 0;
+	}
+
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus
-input:-webkit-autofill,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-	border-top: none;
-	border-left: none;
-	border-right: none;
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-bottom: 1px solid #E0E0E0;
-	-webkit-box-shadow: 0 0 0px 1000px #E3F2FD inset;
+  -webkit-box-shadow: 0 0 0px 1000px #E3F2FD inset;
   transition: background-color 5000s ease-in-out 0s;
 }
