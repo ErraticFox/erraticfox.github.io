@@ -137,6 +137,7 @@ ul.socialMedia li:nth-last-child(1) {
 #contactForm input[type="email"], #contactForm input[type="subject"] {
   padding: 15px;
   border-bottom: 1px solid #E0E0E0;
+	font-size: 1em;
 }
 
 .ui-wrapper {
@@ -146,15 +147,25 @@ ul.socialMedia li:nth-last-child(1) {
 #contactForm textarea {
   padding: 15px;
   height: 100%;
+	font-size: 1em;
 }
 
 #formButtons {
   display: flex;
-  height: 50px;
+  padding: 20px 15px;
   align-items: center;
   justify-content: space-between;
   background-color: #FAFAFA;
   border-bottom: 1px solid #E0E0E0;
+}
+
+#formButtons img {
+  width: 1.5em;
+  opacity: .7;
+}
+
+#formButtons input {
+  display: none;
 }
 
 #contactForm input[type="submit"], #contactForm input[type="button"] {
@@ -166,18 +177,6 @@ ul.socialMedia li:nth-last-child(1) {
   border: 0;
   height: 20px;
   cursor: pointer;
-}
-
-#contactForm input[type="submit"] {
-  background-image: url('../img/send.png');
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-#contactForm input[type="button"] {
-  background-image: url('../img/close.png');
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #closeForm {
@@ -251,23 +250,18 @@ ul.socialMedia li:nth-last-child(1) {
   /*contact form mobile*/
   #contactForm form {
     display: flex;
-    flex-direction: column;
-    width: 95%;
-		height: 95%;
+    width: 100%;
+    height: 100%;
   }
-
-	#contactForm textarea {
-	  height: 100% !important;
-	}
-
-	.ui-wrapper {
+  #contactForm textarea {
+    height: 100% !important;
+  }
+  .ui-wrapper {
     height: 90% !important;
-}
-
-	.ui-icon {
-	  opacity: 0;
-	}
-
+  }
+  .ui-icon {
+    opacity: 0;
+  }
 }
 
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus input:-webkit-autofill, textarea:-webkit-autofill, textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus, select:-webkit-autofill, select:-webkit-autofill:hover, select:-webkit-autofill:focus {

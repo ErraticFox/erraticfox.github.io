@@ -11,7 +11,7 @@ $(document).ready(() => {
 		}, time);
 	})
 
-	$('#cancelForm').click(() => {
+	$('#cancelEmail').click(() => {
 		$('.cardContainer').toggle('slide', {
 			direction: 'left'
 		}, time);
