@@ -138,10 +138,6 @@ ul.socialMedia li:nth-last-child(1) {
 	border-bottom: 1px solid #E0E0E0;
 }
 
-.ui-wrapper {
-	min-height: 200px;
-}
-
 #contactForm textarea {
 	padding: 15px;
 	min-height: 100%;
@@ -149,7 +145,7 @@ ul.socialMedia li:nth-last-child(1) {
 
 #formButtons {
 	display: flex;
-	height: 50px;
+	padding: 15px 5px;
 	align-items: center;
 	justify-content: space-between;
 	background-color: #FAFAFA;
@@ -189,6 +185,10 @@ ul.socialMedia li:nth-last-child(1) {
 }
 
 /* jQuery Overrides */
+
+.ui-wrapper {
+	min-height: 200px;
+}
 
 .ui-wrapper {
   width: 100% !important;
