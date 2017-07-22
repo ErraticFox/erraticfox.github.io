@@ -4,10 +4,13 @@
 <head>
 	<title>ErraticFox</title>
 	<link rel="icon" href="favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
 	<link rel="stylesheet" href="./css/stylesheet.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
 	<script src="https://use.fontawesome.com/d96fcac861.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="referrer" content="origin">
 </head>
@@ -52,16 +55,23 @@
 		</div>
 		<span id="contactMe">or just email me...</span>
 	</div>
-	<div id="contactForm">
+	<div id="contactForm" style="display:none">
 		<form action="https://formspree.io/erraticfox@gmail.com" method="POST">
-			<input class="formPlaceholder" type="email" name="_replyto" placeholder="Email"></br>
-			<textarea class="formPlaceholder" name="message" placeholder="Your message"></textarea></br>
-			<input type="submit" value="Send">
+			<div id="formButtons">
+				<input id="cancelForm" type="button">
+				<input type="submit" value="">
+			</div>
+			<input type="email" name="_replyto" placeholder="Email">
+			<input type="subject" name="_subject" placeholder="Subject" />
+			<textarea name="message" placeholder="Your message"></textarea>
+			<input type="text" name="_gotcha" style="display:none" />
+			<input type="hidden" name="_next" value="http://erraticfox.com/" />
 		</form>
+
 	</div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-git.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/main.js"></script>
 

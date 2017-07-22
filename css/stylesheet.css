@@ -8,7 +8,8 @@ body {
   background-color: #212121;
   color: #F5F5F5;
   font-family: 'Roboto', sans-serif;
-  margin: 0px
+  margin: 0px;
+  overflow-x: hidden;
 }
 
 a, #contactMe {
@@ -70,7 +71,7 @@ ul.socialMedia li:nth-last-child(1) {
 }
 
 .cardContainer {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -94,51 +95,6 @@ ul.socialMedia li:nth-last-child(1) {
   cursor: pointer;
 }
 
-#contactForm {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-#contactForm form {
-	width: 50%;
-}
-
-#contactForm input {
-  border: none;
-  font-size: 18px;
-  padding: 10px;
-  background-color: #EEEEEE;
-}
-
-#contactForm input[type="submit"] {
-  float: right;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  width: 75px;
-}
-
-#contactForm input[type="email"], #contactForm textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-#contactForm textarea {
-  font-family: "Roboto", sans-serif;
-  resize: vertical;
-  min-height: 200px;
-  font-size: 18px;
-  padding: 10px;
-  background-color: #EEEEEE;
-}
-
 .socialMedia {
   font-size: 21px;
   font-weight: 300;
@@ -153,18 +109,120 @@ ul.socialMedia li:nth-last-child(1) {
   fill: rgba(255, 255, 255, .8);
 }
 
-.formPlaceholder::-webkit-input-placeholder {
-  color: #212121;
+.hideOverflow {
+  overflow: hidden;
 }
-.formPlaceholder::-moz-placeholder {
-  color: #212121;
+
+/* contact form*/
+
+#contactForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-.formPlaceholder:-ms-input-placeholder {
-  color: #212121;
+
+#contactForm form {
+  display: flex;
+  flex-direction: column;
+	width: 50%;
 }
-.formPlaceholder:-moz-placeholder {
-  color: #212121;
+
+#contactForm input[type="email"], #contactForm input[type="subject"] {
+	padding: 15px;
+	border-bottom: 1px solid #E0E0E0;
 }
+
+.ui-wrapper {
+	min-height: 200px;
+}
+
+#contactForm textarea {
+	padding: 15px;
+}
+
+#formButtons {
+	display: flex;
+	height: 50px;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #FAFAFA;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+#contactForm input[type="submit"], #contactForm input[type="button"] {
+  box-sizing: border-box;
+	background-color: #FAFAFA;
+	opacity: .8;
+	padding: 0 20px;
+	margin: 0;
+	border: 0;
+	height: 20px;
+	cursor: pointer;
+}
+
+#contactForm input[type="submit"] {
+	background-image: url('../img/send.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#contactForm input[type="button"] {
+	background-image: url('../img/close.png');
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#closeForm {
+  position: absolute;
+	right: 0;
+}
+
+#closeForm:hover {
+  cursor: pointer;
+}
+
+/* jQuery Overrides */
+
+.ui-wrapper {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+.ui-wrapper textarea {
+  width: 100% !important;
+}
+
+.ui-icon {
+  position: absolute;
+  right: 0;
+  height: 15px !important;
+  width: 15px !important;
+	opacity: 0.5;
+}
+
+.ui-resizable-handle {
+  font-size: 12px !important;
+}
+
+.ui-resizable-handle {
+  margin: 0 !important;
+}
+
+.ui-icon {
+  text-indent: 0 !important;
+}
+
+.ui-icon-gripsmall-diagonal-se {
+  background-position: -48px 0px;
+}
+
+/**/
 
 @media only screen and (max-width: 500px) {
   .cardContainer {
@@ -186,4 +244,22 @@ ul.socialMedia li:nth-last-child(1) {
     text-align: center;
     padding-left: 0px;
   }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+  border-bottom: 1px solid #E0E0E0;
+	-webkit-box-shadow: 0 0 0px 1000px #E3F2FD inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
